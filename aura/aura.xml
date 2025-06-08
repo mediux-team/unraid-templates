@@ -28,7 +28,7 @@
     <Icon>https://raw.githubusercontent.com/mediux-team/aura/master/frontend/public/aura_logo.png</Icon>
     <ExtraSearchTerms>mediux aura poster media server image retrieval automation plex emby jellyfin
         kometa meta manager</ExtraSearchTerms>
-    <TemplateURL>https://raw.githubusercontent.com/mediux-yeam/unraid_templates/main/aura/aura.xml</TemplateURL>
+    <TemplateURL>https://raw.githubusercontent.com/mediux-team/unraid-templates/main/aura/aura.xml</TemplateURL>
     <Maintainer>
         <Webpage>https://github.com/mediux-team</Webpage>
     </Maintainer>
