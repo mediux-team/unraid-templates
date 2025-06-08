@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>AURA</Name>
+    <Repository>ghcr.io/mediux-team/aura</Repository>
+    <Registry>ghcr.io/mediux-team/aura</Registry>
+    <Branch>
+        <Tag>latest</Tag>
+        <TagDescription>Latest stable release</TagDescription>
+    </Branch>
+    <Branch>
+        <Tag>beta</Tag>
+        <TagDescription>Latest beta release</TagDescription>
+    </Branch>
+    <Beta>true</Beta>
+    <Network>bridge</Network>
+    <Shell>sh</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://github.com/mediux-team/AURA/issues</Support>
+    <Project>https://github.com/mediux-team/AURA</Project>
+    <Overview>AURA stands for Automated Utility for Retrieval of Assets. It is a tool designed to
+        use Mediux images for your media server content. It provides a simple and intuitive web
+        interface to browse and select image sets for your library. While there are many tools
+        available for this purpose, AURA stands out by offering a visual web interface to preview
+        images before selection.</Overview>
+    <Category>MediaServer:Other Status:Beta</Category>
+    <WebUI>http://[IP]:[PORT:3000]</WebUI>
+    <TemplateURL />
+    <Icon>https://raw.githubusercontent.com/mediux-team/aura/master/frontend/public/aura_logo.png</Icon>
+    <ExtraSearchTerms>mediux aura poster media server image retrieval automation plex emby jellyfin
+        kometa meta manager</ExtraSearchTerms>
+    <TemplateURL>https://raw.githubusercontent.com/mediux-yeam/unraid_templates/main/aura/aura.xml</TemplateURL>
+    <Maintainer>
+        <Webpage>https://github.com/mediux-team</Webpage>
+    </Maintainer>
+
+    <Config Name="Config" Target="/config" Default="/mnt/user/appdata/aura/" Mode="rw"
+        Description="Config Directory" Type="Path" Display="always" Required="true" Mask="false">
+        /mnt/user/appdata/aura/</Config>
+
+    <Config Name="Media Path" Target="/data/media" Default="" Mode="rw"
+        Description="Path to the media directory, This should match Media Server you are using (Plex, Emby or Jellyfin)"
+        Type="Path" Display="always" Required="true" Mask="false" />
+
+    <Config Name="APP_PORT" Target="3000" Default="3000" Mode="tcp"
+        Description="This is the port for the WEB UI" Type="Port" Display="always" Required="false"
+        Mask="false">3000</Config>
+
+    <Config Name="BACKEND_PORT" Target="8888" Default="8888" Mode="tcp"
+        Description="This is the port for the backend API" Type="Port" Display="always"
+        Required="false"
+        Mask="false">8888</Config>
+
+</Container>
