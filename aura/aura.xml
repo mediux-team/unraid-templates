@@ -38,15 +38,16 @@
         /mnt/user/appdata/aura/</Config>
 
     <Config Name="Media Path" Target="/data/media" Default="" Mode="rw"
-        Description="Path to the media directory, This should match Media Server you are using (Plex, Emby or Jellyfin)"
+        Description="Path to the media directory, This should match the Media Server you are using (Plex, Emby or Jellyfin)"
         Type="Path" Display="always" Required="true" Mask="false" />
 
-    <Config Name="APP_PORT" Target="3000" Default="3000" Mode="tcp"
-        Description="This is the port for the WEB UI" Type="Port" Display="always" Required="false"
+    <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp"
+        Description="TThis is port for the WEB UI/Frontend of the app" Type="Port" Display="always"
+        Required="true"
         Mask="false">3000</Config>
 
-    <Config Name="BACKEND_PORT" Target="8888" Default="8888" Mode="tcp"
-        Description="This is the port for the backend API" Type="Port" Display="always"
+    <Config Name="API Port" Target="8888" Default="8888" Mode="tcp"
+        Description="This is the API/Backend port for the app" Type="Port" Display="always"
         Required="false"
         Mask="false">8888</Config>
 
